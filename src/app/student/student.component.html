@@ -1,0 +1,12 @@
+<table class="table-bordered mt-5">
+  <tr>
+    <th>Roll Number</th>
+    <th>Name</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let student of students" [class.selected] = "isSelected(student)">
+    <td>{{student.id}}</td>
+    <td>{{student.name}}</td>
+    <td><button (click)="onSelect(student)">view Profile</button></td>
+  </tr>
+</table>
